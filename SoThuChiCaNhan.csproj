@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Support methods\" />
+    <Folder Include="Support Methods\" />
   </ItemGroup>
 
   <ItemGroup>
