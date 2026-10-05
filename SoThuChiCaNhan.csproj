@@ -9,8 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="HoTro\" />
-    <Folder Include="TaiNguyen\" />
+    <Folder Include="Support methods\" />
   </ItemGroup>
 
   <ItemGroup>
