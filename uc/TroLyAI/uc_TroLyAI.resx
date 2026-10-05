@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="guna2HtmlLabel3.Text" xml:space="preserve">
+    <value>&lt;span style='padding-left: 3px'&gt;T&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;R&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;A&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;N&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;G&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt; &lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;T&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;R&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;Ố&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;N&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;G&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;2&lt;/span&gt;</value>
+  </data>
 </root>

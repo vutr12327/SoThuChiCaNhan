@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="hlb_TieuDeTrang.Text" xml:space="preserve">
+    <value>&lt;span style='padding-left: 3px'&gt;T&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;Ổ&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;N&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;G&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt; &lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;Q&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;U&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;A&lt;/span&gt;
+&lt;span style='padding-left: 3px'&gt;N&lt;/span&gt;</value>
+  </data>
   <metadata name="dc_DiChuyenForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

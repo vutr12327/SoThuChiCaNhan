@@ -6,28 +6,34 @@ namespace SoThuChiCaNhan.frm.HoTro;
 
 public static class TrangDon
 {
+    /// <summary>
+    /// Chuyển đổi và hiển thị một UserControl lên Panel chính
+    /// </summary>
+    /// <param name="pnlMain">Panel chứa giao diện chính</param>
+    /// <param name="ucCanHien">UserControl giao diện trang cần hiển thị</param>
     public static void HienTrang(Guna2Panel pnlMain, UserControl ucCanHien)
     {
+        // Kiểm tra an toàn
         if (pnlMain == null || ucCanHien == null) return;
 
-        // Tạm thời tắt vẽ giao diện
+        // Tạm dừng vẽ giao diện
         pnlMain.SuspendLayout();
 
-        // Dọn dẹp trang cũ
+        // Dọn dẹp UserControl cũ
         pnlMain.Controls.Clear();
 
-        // Đặt vị trí đầu trang và thêm vào Panel
+        // Định dạng kích thước và thuộc tính co giãn theo Panel chính
         ucCanHien.Width = pnlMain.ClientSize.Width;
         ucCanHien.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
         ucCanHien.Location = new Point(0, 0);
 
-        // Thêm trang cần hiển thị
+        // Thêm UserControl mới vào Panel
         pnlMain.Controls.Add(ucCanHien);
 
-        // Đặt l
+        // Đưa thanh cuộn về vị trí đầu trang
         pnlMain.AutoScrollPosition = new Point(0, 0);
 
-        // Mở lại vẽ giao diện
+        // Bật vẽ giao diện
         pnlMain.ResumeLayout(true);
     }
 }
