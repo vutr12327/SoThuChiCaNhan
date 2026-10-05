@@ -63,6 +63,16 @@ namespace SoThuChiCaNhan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _9bc940893848b63365d368e939d63bc1 {
+            get {
+                object obj = ResourceManager.GetObject("9bc940893848b63365d368e939d63bc1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ai {
             get {
                 object obj = ResourceManager.GetObject("ai", resourceCulture);

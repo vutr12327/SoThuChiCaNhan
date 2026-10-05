@@ -45,10 +45,10 @@ partial class frm_GiaoDienChinh
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GiaoDienChinh));
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GiaoDienChinh));
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -302,13 +302,13 @@ partial class frm_GiaoDienChinh
         hlb_TenNguoiDung.ForeColor = Color.White;
         hlb_TenNguoiDung.Location = new Point(71, 21);
         hlb_TenNguoiDung.Name = "hlb_TenNguoiDung";
-        hlb_TenNguoiDung.Size = new Size(86, 22);
+        hlb_TenNguoiDung.Size = new Size(104, 22);
         hlb_TenNguoiDung.TabIndex = 2;
-        hlb_TenNguoiDung.Text = "Tên của bạn";
+        hlb_TenNguoiDung.Text = "Rome Nalssido";
         // 
         // cpb_AnhDaiDienNguoiDung
         // 
-        cpb_AnhDaiDienNguoiDung.Image = Properties.Resources.user1;
+        cpb_AnhDaiDienNguoiDung.Image = (Image)resources.GetObject("cpb_AnhDaiDienNguoiDung.Image");
         cpb_AnhDaiDienNguoiDung.ImageRotate = 0F;
         cpb_AnhDaiDienNguoiDung.Location = new Point(18, 21);
         cpb_AnhDaiDienNguoiDung.Name = "cpb_AnhDaiDienNguoiDung";

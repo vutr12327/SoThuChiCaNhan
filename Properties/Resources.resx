@@ -121,9 +121,6 @@
   <data name="ai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TaiNguyen\ai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\TaiNguyen\vnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TaiNguyen\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,19 +136,25 @@
   <data name="save_money_gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TaiNguyen\save_money_gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\TaiNguyen\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="saving1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TaiNguyen\saving.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="transaction-history" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TaiNguyen\transaction-history.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\TaiNguyen\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="profit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\TaiNguyen\profit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\TaiNguyen\vnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TaiNguyen\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="profit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\TaiNguyen\profit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="9bc940893848b63365d368e939d63bc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9bc940893848b63365d368e939d63bc1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
