@@ -11,10 +11,10 @@
   <ItemGroup>
     <Folder Include="HoTro\" />
     <Folder Include="TaiNguyen\" />
-    <Folder Include="uc\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Guna.Charts.WinForms" Version="1.1.0" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.8" />
   </ItemGroup>
 

@@ -35,18 +35,42 @@ public partial class frm_GiaoDienChinh
         pnl_TrenCung.BackColor = MauPhu;
 
         //
-        // Tiêu đề trang (usercontrol title)
+        // Hiệu ứng Active menu thanh bên
         //
-        hlb_TieuDeTrang.Text = string.Join("\t", hlb_TieuDeTrang.Text.ToUpper().ToCharArray());
-
-        //
-        // htmllb_TenNguoiDung
-        //
-        //htmllb_TenNguoiDung.Text = $"<div style=\"color: gray;\">Người dùng</div>\r\n<div style=\"font-weight: bold; color: {ColorTranslator.ToHtml(MauChinh)};\">Trần Nguyên Vũ</div>\r\n";
+        foreach (Control c in guna2Panel2.Controls)
+        {
+            if (c is Guna2Button btn)
+            {
+                btn.Click -= KichHoatNut; // Huỷ đăng ký
+                btn.Click += KichHoatNut; // Đăng ký
+            }
+        }
     }
     #endregion
 
-    #region Sự kiện: Hiệu ứng
+    #region Sự kiện hiệu ứng
+    //
+    // Sự kiện hiệu ứng Active menu thanh bên
+    //
+    private void KichHoatNut(object sender, EventArgs e)
+    {
+        foreach (Control c in guna2Panel2.Controls)
+        {
+            if (c is Guna2Button btn)
+            {
+                if(btn == (Guna2Button)sender)
+                {
+                    btn.FillColor = Color.FromArgb(90, 0, 0, 0);
+                    btn.ForeColor = Color.White;
+                } 
+                else
+                {
+                    btn.FillColor = Color.Transparent;
+                    btn.ForeColor = Color.FromArgb(200, 255, 255, 255);
+                }
+            }
+        }
+    }
 
     #endregion
 }
