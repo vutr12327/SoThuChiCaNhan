@@ -1,2 +1,2 @@
 # SoThuChiCaNhan
-<a href="https://ibb.co/B5zxsKJJ"><img src="https://i.ibb.co/gLjpgF88/Capture.png" alt="Capture" border="0"></a>
+<a href='https://postimages.org/' target='_blank'><img style="width: 100%" src='https://i.postimg.cc/L82wVgdx/Capture.png' border='0' alt='Capture'></a>
