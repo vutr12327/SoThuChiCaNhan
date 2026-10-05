@@ -14,4 +14,5 @@ public partial class uc_TongQuan : UserControl
     {
         InitializeComponent();
     }
+
 }

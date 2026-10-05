@@ -66,7 +66,7 @@ public partial class frm_GiaoDienChinh
                 else
                 {
                     btn.FillColor = Color.Transparent;
-                    btn.ForeColor = Color.FromArgb(200, 255, 255, 255);
+                    btn.ForeColor = Color.LightGray;
                 }
             }
         }

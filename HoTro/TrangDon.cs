@@ -13,16 +13,21 @@ public static class TrangDon
         // Tạm thời tắt vẽ giao diện
         pnlMain.SuspendLayout();
 
-        // Đảm bảo trang hiển thị chiếm trọn panel
-        ucCanHien.Dock = DockStyle.Fill;
-
         // Dọn dẹp trang cũ
         pnlMain.Controls.Clear();
+
+        // Đặt vị trí đầu trang và thêm vào Panel
+        ucCanHien.Width = pnlMain.ClientSize.Width;
+        ucCanHien.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+        ucCanHien.Location = new Point(0, 0);
 
         // Thêm trang cần hiển thị
         pnlMain.Controls.Add(ucCanHien);
 
+        // Đặt l
+        pnlMain.AutoScrollPosition = new Point(0, 0);
+
         // Mở lại vẽ giao diện
-        pnlMain.ResumeLayout();
+        pnlMain.ResumeLayout(true);
     }
 }
