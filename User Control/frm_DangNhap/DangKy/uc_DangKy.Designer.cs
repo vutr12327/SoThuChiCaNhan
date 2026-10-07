@@ -126,6 +126,7 @@ partial class uc_DangKy
         btn_DangKy.Size = new Size(160, 50);
         btn_DangKy.TabIndex = 12;
         btn_DangKy.Text = "Đăng ký";
+        btn_DangKy.Click += this.btn_DangKy_Click;
         // 
         // guna2HtmlLabel1
         // 

@@ -124,6 +124,7 @@ partial class uc_DangNhap
         btn_DangNhap.Size = new Size(160, 50);
         btn_DangNhap.TabIndex = 4;
         btn_DangNhap.Text = "Đăng nhập";
+        btn_DangNhap.Click += btn_DangNhap_Click;
         // 
         // guna2HtmlLabel3
         // 

@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using SoThuChiCaNhan;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,8 +10,6 @@ public partial class frm_GiaoDienChinh
 {
     private void ChuyenTrang(UserControl ucCanHien)
     {
-        if (ucCanHien == null) return;
-        if (pnl_HienThi.Controls.Contains(ucCanHien)) return;
         TrangDon.HienTrang(pnl_HienThi, ucCanHien);
     }
 

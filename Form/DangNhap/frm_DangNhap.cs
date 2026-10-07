@@ -10,6 +10,8 @@ namespace SoThuChiCaNhan;
 
 public partial class frm_DangNhap : Form
 {
+    private readonly srv_NguoiDung srvNguoiDung = new();
+
     public frm_DangNhap()
     {
         InitializeComponent();

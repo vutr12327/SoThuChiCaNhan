@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Guna.UI2;
 using Guna.UI2.WinForms;
+
 namespace SoThuChiCaNhan;
 
 public static class TrangDon

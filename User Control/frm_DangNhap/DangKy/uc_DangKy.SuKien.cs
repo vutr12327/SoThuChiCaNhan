@@ -33,4 +33,10 @@ public partial class uc_DangKy
         OnChuyenSangDangNhap.Invoke(this, EventArgs.Empty);
         tb_MatKhau.Text = "";
     }
+
+    public event Action<string, string, string> OnDangKy;
+    private void btn_DangKy_Click(object sender, EventArgs e)
+    {
+        OnDangKy.Invoke(tb_TenNguoiDung.Text, tb_TaiKhoan.Text, tb_MatKhau.Text);
+    }
 }
