@@ -8,17 +8,16 @@ using System.Windows.Forms;
 
 namespace SoThuChiCaNhan;
 
-public partial class frm_DangNhap : Form
+public partial class uc_DangNhap : UserControl
 {
-    public frm_DangNhap()
+    public uc_DangNhap()
     {
         InitializeComponent();
-        run_SuKien();
         run();
     }
 
     private void run()
     {
-        HienThiDangNhap(null, null);
+
     }
 }

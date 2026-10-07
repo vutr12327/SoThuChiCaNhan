@@ -17,7 +17,7 @@ namespace SoThuChiCaNhan;
 public partial class frm_GiaoDienChinh
 {
     #region Bộ màu sắc (https://rgb.vn/color-schemes-53-bang-phoi-mau-dep-goi-y-cho-cac-thiet-ke-cua-designer/)
-    private readonly Color MauChinh = ColorTranslator.FromHtml("#000181");
+    private readonly Color MauChinh = ColorTranslator.FromHtml("MidnightBlue");
     private readonly Color MauPhu = ColorTranslator.FromHtml("#1974D3");
     #endregion
 
@@ -25,14 +25,16 @@ public partial class frm_GiaoDienChinh
     private void run_MauSac()
     {
         //
-        // Thanh Bên (pnl_ThanhBen)
+        // Màu chính
         //
         pnl_ThanhBen.BackColor = MauChinh;
+        btn_TroLyCuaBan.FillColor = MauChinh;
 
         //
-        // Thanh trên cùng (pnl_TrenCung)
+        // Màu phụ
         //
         pnl_TrenCung.BackColor = MauPhu;
+        btn_ThongTinNguoiDung.FillColor = MauPhu;
 
         //
         // Hiệu ứng Active menu thanh bên
@@ -41,8 +43,8 @@ public partial class frm_GiaoDienChinh
         {
             if (c is Guna2Button btn)
             {
-                btn.Click -= KichHoatNut; // Huỷ đăng ký
-                btn.Click += KichHoatNut; // Đăng ký
+                btn.Click -= KichHoatNut;
+                btn.Click += KichHoatNut;
             }
         }
     }

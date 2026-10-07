@@ -39,16 +39,16 @@ partial class frm_GiaoDienChinh
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GiaoDienChinh));
-        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_GiaoDienChinh));
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
         Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -67,16 +67,16 @@ partial class frm_GiaoDienChinh
         btn_LichSuGiaoDich = new Guna.UI2.WinForms.Guna2Button();
         btn_TroChuyenVoiTroLy = new Guna.UI2.WinForms.Guna2Button();
         btn_TongQuan = new Guna.UI2.WinForms.Guna2Button();
+        panel3 = new Panel();
+        guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+        guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+        hlb_TieuDe = new Guna.UI2.WinForms.Guna2HtmlLabel();
         guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
         btn_ThongTinNguoiDung = new Guna.UI2.WinForms.Guna2Button();
         btn_DangXuat = new Guna.UI2.WinForms.Guna2Button();
         hlb_CapDo = new Guna.UI2.WinForms.Guna2HtmlLabel();
         hlb_TenNguoiDung = new Guna.UI2.WinForms.Guna2HtmlLabel();
         cpb_AnhDaiDienNguoiDung = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-        panel3 = new Panel();
-        guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-        hlb_TieuDe = new Guna.UI2.WinForms.Guna2HtmlLabel();
         pnl_TrenCung = new Panel();
         hlb_TieuDeTrang = new Guna.UI2.WinForms.Guna2HtmlLabel();
         btn_TroLyCuaBan = new Guna.UI2.WinForms.Guna2Button();
@@ -89,19 +89,19 @@ partial class frm_GiaoDienChinh
         dc_DiChuyenForm = new Guna.UI2.WinForms.Guna2DragControl(components);
         pnl_ThanhBen.SuspendLayout();
         guna2Panel2.SuspendLayout();
-        guna2Panel1.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)cpb_AnhDaiDienNguoiDung).BeginInit();
         panel3.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+        guna2Panel1.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)cpb_AnhDaiDienNguoiDung).BeginInit();
         pnl_TrenCung.SuspendLayout();
         SuspendLayout();
         // 
         // pnl_ThanhBen
         // 
-        pnl_ThanhBen.BackColor = Color.FromArgb(0, 1, 129);
+        pnl_ThanhBen.BackColor = Color.MidnightBlue;
         pnl_ThanhBen.Controls.Add(guna2Panel2);
-        pnl_ThanhBen.Controls.Add(guna2Panel1);
         pnl_ThanhBen.Controls.Add(panel3);
+        pnl_ThanhBen.Controls.Add(guna2Panel1);
         pnl_ThanhBen.Dock = DockStyle.Left;
         pnl_ThanhBen.Location = new Point(0, 0);
         pnl_ThanhBen.Name = "pnl_ThanhBen";
@@ -110,6 +110,7 @@ partial class frm_GiaoDienChinh
         // 
         // guna2Panel2
         // 
+        guna2Panel2.BackColor = Color.Transparent;
         guna2Panel2.Controls.Add(btn_CaiDat);
         guna2Panel2.Controls.Add(btn_LichSuGiaoDich);
         guna2Panel2.Controls.Add(btn_TroChuyenVoiTroLy);
@@ -225,102 +226,9 @@ partial class frm_GiaoDienChinh
         btn_TongQuan.TextAlign = HorizontalAlignment.Left;
         btn_TongQuan.Click += btn_TongQuan_Click;
         // 
-        // guna2Panel1
-        // 
-        guna2Panel1.Controls.Add(btn_ThongTinNguoiDung);
-        guna2Panel1.Controls.Add(btn_DangXuat);
-        guna2Panel1.Controls.Add(hlb_CapDo);
-        guna2Panel1.Controls.Add(hlb_TenNguoiDung);
-        guna2Panel1.Controls.Add(cpb_AnhDaiDienNguoiDung);
-        guna2Panel1.CustomizableEdges = customizableEdges16;
-        guna2Panel1.Dock = DockStyle.Bottom;
-        guna2Panel1.Location = new Point(0, 506);
-        guna2Panel1.Name = "guna2Panel1";
-        guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges17;
-        guna2Panel1.Size = new Size(230, 144);
-        guna2Panel1.TabIndex = 2;
-        // 
-        // btn_ThongTinNguoiDung
-        // 
-        btn_ThongTinNguoiDung.Animated = true;
-        btn_ThongTinNguoiDung.AnimatedGIF = true;
-        btn_ThongTinNguoiDung.AutoRoundedCorners = true;
-        btn_ThongTinNguoiDung.Cursor = Cursors.Hand;
-        btn_ThongTinNguoiDung.CustomizableEdges = customizableEdges11;
-        btn_ThongTinNguoiDung.DisabledState.BorderColor = Color.DarkGray;
-        btn_ThongTinNguoiDung.DisabledState.CustomBorderColor = Color.DarkGray;
-        btn_ThongTinNguoiDung.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-        btn_ThongTinNguoiDung.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-        btn_ThongTinNguoiDung.FillColor = Color.FromArgb(25, 116, 211);
-        btn_ThongTinNguoiDung.Font = new Font("Segoe UI Semibold", 6F, FontStyle.Bold);
-        btn_ThongTinNguoiDung.ForeColor = Color.White;
-        btn_ThongTinNguoiDung.Location = new Point(18, 78);
-        btn_ThongTinNguoiDung.Name = "btn_ThongTinNguoiDung";
-        btn_ThongTinNguoiDung.ShadowDecoration.CustomizableEdges = customizableEdges12;
-        btn_ThongTinNguoiDung.Size = new Size(194, 26);
-        btn_ThongTinNguoiDung.TabIndex = 4;
-        btn_ThongTinNguoiDung.Text = "THÔNG TIN";
-        btn_ThongTinNguoiDung.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-        // 
-        // btn_DangXuat
-        // 
-        btn_DangXuat.Animated = true;
-        btn_DangXuat.AnimatedGIF = true;
-        btn_DangXuat.AutoRoundedCorners = true;
-        btn_DangXuat.Cursor = Cursors.Hand;
-        btn_DangXuat.CustomizableEdges = customizableEdges13;
-        btn_DangXuat.DisabledState.BorderColor = Color.DarkGray;
-        btn_DangXuat.DisabledState.CustomBorderColor = Color.DarkGray;
-        btn_DangXuat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-        btn_DangXuat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-        btn_DangXuat.FillColor = Color.White;
-        btn_DangXuat.Font = new Font("Segoe UI Semibold", 6F, FontStyle.Bold);
-        btn_DangXuat.ForeColor = Color.Black;
-        btn_DangXuat.Location = new Point(18, 109);
-        btn_DangXuat.Name = "btn_DangXuat";
-        btn_DangXuat.ShadowDecoration.CustomizableEdges = customizableEdges14;
-        btn_DangXuat.Size = new Size(194, 26);
-        btn_DangXuat.TabIndex = 3;
-        btn_DangXuat.Text = "ĐĂNG XUẤT";
-        btn_DangXuat.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-        // 
-        // hlb_CapDo
-        // 
-        hlb_CapDo.BackColor = Color.Transparent;
-        hlb_CapDo.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
-        hlb_CapDo.ForeColor = Color.Silver;
-        hlb_CapDo.Location = new Point(71, 47);
-        hlb_CapDo.Name = "hlb_CapDo";
-        hlb_CapDo.Size = new Size(67, 17);
-        hlb_CapDo.TabIndex = 3;
-        hlb_CapDo.Text = "Người dùng";
-        // 
-        // hlb_TenNguoiDung
-        // 
-        hlb_TenNguoiDung.BackColor = Color.Transparent;
-        hlb_TenNguoiDung.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-        hlb_TenNguoiDung.ForeColor = Color.White;
-        hlb_TenNguoiDung.Location = new Point(71, 21);
-        hlb_TenNguoiDung.Name = "hlb_TenNguoiDung";
-        hlb_TenNguoiDung.Size = new Size(104, 22);
-        hlb_TenNguoiDung.TabIndex = 2;
-        hlb_TenNguoiDung.Text = "Rome Nalssido";
-        // 
-        // cpb_AnhDaiDienNguoiDung
-        // 
-        cpb_AnhDaiDienNguoiDung.Image = (Image)resources.GetObject("cpb_AnhDaiDienNguoiDung.Image");
-        cpb_AnhDaiDienNguoiDung.ImageRotate = 0F;
-        cpb_AnhDaiDienNguoiDung.Location = new Point(18, 21);
-        cpb_AnhDaiDienNguoiDung.Name = "cpb_AnhDaiDienNguoiDung";
-        cpb_AnhDaiDienNguoiDung.ShadowDecoration.CustomizableEdges = customizableEdges15;
-        cpb_AnhDaiDienNguoiDung.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-        cpb_AnhDaiDienNguoiDung.Size = new Size(47, 48);
-        cpb_AnhDaiDienNguoiDung.SizeMode = PictureBoxSizeMode.Zoom;
-        cpb_AnhDaiDienNguoiDung.TabIndex = 2;
-        cpb_AnhDaiDienNguoiDung.TabStop = false;
-        // 
         // panel3
         // 
+        panel3.BackColor = Color.Transparent;
         panel3.Controls.Add(guna2HtmlLabel2);
         panel3.Controls.Add(guna2PictureBox1);
         panel3.Controls.Add(hlb_TieuDe);
@@ -343,12 +251,12 @@ partial class frm_GiaoDienChinh
         // 
         // guna2PictureBox1
         // 
-        guna2PictureBox1.CustomizableEdges = customizableEdges18;
+        guna2PictureBox1.CustomizableEdges = customizableEdges11;
         guna2PictureBox1.Image = Properties.Resources.Logo;
         guna2PictureBox1.ImageRotate = 0F;
         guna2PictureBox1.Location = new Point(17, 27);
         guna2PictureBox1.Name = "guna2PictureBox1";
-        guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges19;
+        guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
         guna2PictureBox1.Size = new Size(46, 52);
         guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         guna2PictureBox1.TabIndex = 2;
@@ -365,6 +273,101 @@ partial class frm_GiaoDienChinh
         hlb_TieuDe.TabIndex = 2;
         hlb_TieuDe.Text = "SỔ THU CHI";
         hlb_TieuDe.TextAlignment = ContentAlignment.MiddleLeft;
+        // 
+        // guna2Panel1
+        // 
+        guna2Panel1.BackColor = Color.Transparent;
+        guna2Panel1.Controls.Add(btn_ThongTinNguoiDung);
+        guna2Panel1.Controls.Add(btn_DangXuat);
+        guna2Panel1.Controls.Add(hlb_CapDo);
+        guna2Panel1.Controls.Add(hlb_TenNguoiDung);
+        guna2Panel1.Controls.Add(cpb_AnhDaiDienNguoiDung);
+        guna2Panel1.CustomizableEdges = customizableEdges18;
+        guna2Panel1.Dock = DockStyle.Bottom;
+        guna2Panel1.Location = new Point(0, 506);
+        guna2Panel1.Name = "guna2Panel1";
+        guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges19;
+        guna2Panel1.Size = new Size(230, 144);
+        guna2Panel1.TabIndex = 2;
+        // 
+        // btn_ThongTinNguoiDung
+        // 
+        btn_ThongTinNguoiDung.Animated = true;
+        btn_ThongTinNguoiDung.AnimatedGIF = true;
+        btn_ThongTinNguoiDung.AutoRoundedCorners = true;
+        btn_ThongTinNguoiDung.Cursor = Cursors.Hand;
+        btn_ThongTinNguoiDung.CustomizableEdges = customizableEdges13;
+        btn_ThongTinNguoiDung.DisabledState.BorderColor = Color.DarkGray;
+        btn_ThongTinNguoiDung.DisabledState.CustomBorderColor = Color.DarkGray;
+        btn_ThongTinNguoiDung.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+        btn_ThongTinNguoiDung.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+        btn_ThongTinNguoiDung.FillColor = Color.FromArgb(25, 116, 211);
+        btn_ThongTinNguoiDung.Font = new Font("Segoe UI Semibold", 6F, FontStyle.Bold);
+        btn_ThongTinNguoiDung.ForeColor = Color.White;
+        btn_ThongTinNguoiDung.Location = new Point(12, 78);
+        btn_ThongTinNguoiDung.Name = "btn_ThongTinNguoiDung";
+        btn_ThongTinNguoiDung.ShadowDecoration.CustomizableEdges = customizableEdges14;
+        btn_ThongTinNguoiDung.Size = new Size(206, 26);
+        btn_ThongTinNguoiDung.TabIndex = 4;
+        btn_ThongTinNguoiDung.Text = "THÔNG TIN";
+        btn_ThongTinNguoiDung.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+        // 
+        // btn_DangXuat
+        // 
+        btn_DangXuat.Animated = true;
+        btn_DangXuat.AnimatedGIF = true;
+        btn_DangXuat.AutoRoundedCorners = true;
+        btn_DangXuat.Cursor = Cursors.Hand;
+        btn_DangXuat.CustomizableEdges = customizableEdges15;
+        btn_DangXuat.DisabledState.BorderColor = Color.DarkGray;
+        btn_DangXuat.DisabledState.CustomBorderColor = Color.DarkGray;
+        btn_DangXuat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+        btn_DangXuat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+        btn_DangXuat.FillColor = Color.White;
+        btn_DangXuat.Font = new Font("Segoe UI Semibold", 6F, FontStyle.Bold);
+        btn_DangXuat.ForeColor = Color.Black;
+        btn_DangXuat.Location = new Point(12, 109);
+        btn_DangXuat.Name = "btn_DangXuat";
+        btn_DangXuat.ShadowDecoration.CustomizableEdges = customizableEdges16;
+        btn_DangXuat.Size = new Size(206, 26);
+        btn_DangXuat.TabIndex = 3;
+        btn_DangXuat.Text = "ĐĂNG XUẤT";
+        btn_DangXuat.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+        // 
+        // hlb_CapDo
+        // 
+        hlb_CapDo.BackColor = Color.Transparent;
+        hlb_CapDo.Font = new Font("Segoe UI Semibold", 7F, FontStyle.Bold);
+        hlb_CapDo.ForeColor = Color.Silver;
+        hlb_CapDo.Location = new Point(67, 51);
+        hlb_CapDo.Name = "hlb_CapDo";
+        hlb_CapDo.Size = new Size(67, 17);
+        hlb_CapDo.TabIndex = 3;
+        hlb_CapDo.Text = "Người dùng";
+        // 
+        // hlb_TenNguoiDung
+        // 
+        hlb_TenNguoiDung.BackColor = Color.Transparent;
+        hlb_TenNguoiDung.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        hlb_TenNguoiDung.ForeColor = Color.White;
+        hlb_TenNguoiDung.Location = new Point(67, 25);
+        hlb_TenNguoiDung.Name = "hlb_TenNguoiDung";
+        hlb_TenNguoiDung.Size = new Size(104, 22);
+        hlb_TenNguoiDung.TabIndex = 2;
+        hlb_TenNguoiDung.Text = "Rome Nalssido";
+        // 
+        // cpb_AnhDaiDienNguoiDung
+        // 
+        cpb_AnhDaiDienNguoiDung.Image = (Image)resources.GetObject("cpb_AnhDaiDienNguoiDung.Image");
+        cpb_AnhDaiDienNguoiDung.ImageRotate = 0F;
+        cpb_AnhDaiDienNguoiDung.Location = new Point(14, 25);
+        cpb_AnhDaiDienNguoiDung.Name = "cpb_AnhDaiDienNguoiDung";
+        cpb_AnhDaiDienNguoiDung.ShadowDecoration.CustomizableEdges = customizableEdges17;
+        cpb_AnhDaiDienNguoiDung.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+        cpb_AnhDaiDienNguoiDung.Size = new Size(47, 48);
+        cpb_AnhDaiDienNguoiDung.SizeMode = PictureBoxSizeMode.Zoom;
+        cpb_AnhDaiDienNguoiDung.TabIndex = 2;
+        cpb_AnhDaiDienNguoiDung.TabStop = false;
         // 
         // pnl_TrenCung
         // 
@@ -387,7 +390,7 @@ partial class frm_GiaoDienChinh
         hlb_TieuDeTrang.BackColor = Color.Transparent;
         hlb_TieuDeTrang.Font = new Font("Bahnschrift Light SemiCondensed", 11F);
         hlb_TieuDeTrang.ForeColor = Color.White;
-        hlb_TieuDeTrang.Location = new Point(17, 9);
+        hlb_TieuDeTrang.Location = new Point(17, 10);
         hlb_TieuDeTrang.Name = "hlb_TieuDeTrang";
         hlb_TieuDeTrang.Size = new Size(143, 24);
         hlb_TieuDeTrang.TabIndex = 0;
@@ -435,6 +438,7 @@ partial class frm_GiaoDienChinh
         // 
         guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         guna2TextBox1.AutoRoundedCorners = true;
+        guna2TextBox1.BackColor = Color.Transparent;
         guna2TextBox1.CustomizableEdges = customizableEdges22;
         guna2TextBox1.DefaultText = "100.000.000";
         guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -533,12 +537,12 @@ partial class frm_GiaoDienChinh
         Text = "Sổ thu chi cá nhân";
         pnl_ThanhBen.ResumeLayout(false);
         guna2Panel2.ResumeLayout(false);
-        guna2Panel1.ResumeLayout(false);
-        guna2Panel1.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)cpb_AnhDaiDienNguoiDung).EndInit();
         panel3.ResumeLayout(false);
         panel3.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+        guna2Panel1.ResumeLayout(false);
+        guna2Panel1.PerformLayout();
+        ((System.ComponentModel.ISupportInitialize)cpb_AnhDaiDienNguoiDung).EndInit();
         pnl_TrenCung.ResumeLayout(false);
         pnl_TrenCung.PerformLayout();
         ResumeLayout(false);
