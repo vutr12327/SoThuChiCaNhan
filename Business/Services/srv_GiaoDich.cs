@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SoThuChiCaNhan;
+namespace SoThuChiCaNhan.Business.Services;
 
 public enum srv_KetQuaGiaoDich
 {

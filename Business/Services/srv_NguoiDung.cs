@@ -1,4 +1,4 @@
-namespace SoThuChiCaNhan;
+namespace SoThuChiCaNhan.Business.Services;
 
 public enum srv_KetQuaDangKy
 {
@@ -50,25 +50,25 @@ public class srv_NguoiDung
             : srv_KetQuaDoiMatKhau.ThatBai;
     }
 
-    public async Task<srv_KetQuaDangKy> DangKyAsync(string hoTen, string tenDangNhap, string matKhau)
+    public async Task<srv_KetQuaDangKy> DangKyAsync(dto_DangKy d)
     {
-        if (string.IsNullOrWhiteSpace(hoTen) || string.IsNullOrWhiteSpace(tenDangNhap) || string.IsNullOrWhiteSpace(matKhau))
+        if (string.IsNullOrWhiteSpace(d.hoTen) || string.IsNullOrWhiteSpace(d.tenDangNhap) || string.IsNullOrWhiteSpace(d.matKhau))
             return srv_KetQuaDangKy.DuLieuKhongHopLe;
 
         // Kiểm tra độ dài chuỗi
-        if (tenDangNhap.Length > 50 || hoTen.Length > 100 || matKhau.Length > 255)
+        if (d.tenDangNhap.Length > 50 || d.hoTen.Length > 100 || d.matKhau.Length > 255)
             return srv_KetQuaDangKy.DuLieuKhongHopLe;
 
         // Kiểm tra tồn tại người dùng trên hệ thống
-        if (await dalNguoiDung.TimTheoTenDangNhap(tenDangNhap) != null)
+        if (await dalNguoiDung.TimTheoTenDangNhap(d.tenDangNhap) != null)
             return srv_KetQuaDangKy.TaiKhoanDaTonTai;
 
-        // Tạo đối tượng người dùng mới
+        // Tạo đối tượng người dùng mới để phục vụ cho DAL
         mod_NguoiDung ngd = new()
         {
-            HoTen = hoTen,
-            TenDangNhap = tenDangNhap,
-            MatKhau = BCrypt.Net.BCrypt.HashPassword(matKhau),
+            HoTen = d.hoTen,
+            TenDangNhap = d.tenDangNhap,
+            MatKhau = BCrypt.Net.BCrypt.HashPassword(d.matKhau),
             SoDu = 0,
             AnhDaiDien = "default_avatar.png",
             NgayTao = DateTime.Now
@@ -79,17 +79,28 @@ public class srv_NguoiDung
             : srv_KetQuaDangKy.ThatBai;
     }
 
-    public async Task<(srv_KetQuaDangNhap kq, mod_NguoiDung? ngd)> DangNhapAsync(string tenDangNhap, string matKhau)
+    public async Task<(srv_KetQuaDangNhap kq, dto_NguoiDung? ngd)> DangNhapAsync(dto_DangNhap d)
     {
-        if (string.IsNullOrWhiteSpace(tenDangNhap) || string.IsNullOrWhiteSpace(matKhau))
+        if (string.IsNullOrWhiteSpace(d.tenDangNhap) || string.IsNullOrWhiteSpace(d.matKhau))
             return (srv_KetQuaDangNhap.DuLieuKhongHopLe, null);
 
         // Tìm kiếm người dùng trên csdl
-        var ngd = await dalNguoiDung.TimTheoTenDangNhap(tenDangNhap);
+        var ngd = await dalNguoiDung.TimTheoTenDangNhap(d.tenDangNhap);
+
+        // Kiểm tra tài khoản tồn tại và khớp mật khẩu
+        if (ngd == null || !BCrypt.Net.BCrypt.Verify(d.matKhau, ngd.MatKhau)) 
+            return (srv_KetQuaDangNhap.SaiThongTin, null);
+
+        // Khởi tạo DTO Người dùng cho UI sử dụng
+        var dto_ngd = new dto_NguoiDung(
+            ngd.MaNguoiDung,
+            ngd.TenDangNhap,
+            ngd.HoTen,
+            ngd.SoDu,
+            ngd.AnhDaiDien
+        );
 
         // Trả về dữ liệu người dùng
-        return (ngd == null || !BCrypt.Net.BCrypt.Verify(matKhau, ngd.MatKhau)) 
-            ? (srv_KetQuaDangNhap.SaiThongTin, null)
-            : (srv_KetQuaDangNhap.ThanhCong, ngd);
+        return (srv_KetQuaDangNhap.ThanhCong, dto_ngd);
     }
 }

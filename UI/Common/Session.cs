@@ -7,7 +7,7 @@ namespace SoThuChiCaNhan;
 
 public class Session
 {
-    public static mod_NguoiDung NguoiDung { get; set; }
+    public static dto_NguoiDung? NguoiDung { get; set; }
 
     public static void DangXuat()
     {

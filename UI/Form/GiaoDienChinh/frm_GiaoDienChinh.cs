@@ -10,15 +10,12 @@ namespace SoThuChiCaNhan;
 
 public partial class frm_GiaoDienChinh : Form
 {
-    #region Hàm khởi tạo
     public frm_GiaoDienChinh()
     {
         InitializeComponent();
         run();
     }
-    #endregion
 
-    #region Khởi tạo mặc định khi mở ứng dụng lần đầu
     private void run()
     {
         //
@@ -47,5 +44,4 @@ public partial class frm_GiaoDienChinh : Form
         //
         KichHoatNut(btn_TongQuan, EventArgs.Empty);
     }
-    #endregion
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using SoThuChiCaNhan.Business.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -32,7 +33,7 @@ public partial class frm_DangNhap
             this.Enabled = false;
 
             var ans = await Task.Run(async () =>
-                await DichVuNguoiDung.DangKyAsync(hoTen, taiKhoan, matKhau)
+                await DichVuNguoiDung.DangKyAsync(new dto_DangKy(hoTen, taiKhoan, matKhau))
             );
 
             switch (ans)
@@ -76,7 +77,7 @@ public partial class frm_DangNhap
             this.Enabled = false;
 
             var KetQua = await Task.Run(async () =>
-                await DichVuNguoiDung.DangNhapAsync(taiKhoan, matKhau)
+                await DichVuNguoiDung.DangNhapAsync(new dto_DangNhap(taiKhoan, matKhau))
             );
 
             switch (KetQua.kq)

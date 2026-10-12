@@ -10,13 +10,12 @@ namespace SoThuChiCaNhan;
 
 public partial class frm_DangNhap : Form
 {
-    #region Hàm khởi tạo
     public frm_DangNhap()
     {
         InitializeComponent();
         run();
     }
-    #endregion
+
     private void run()
     {
         //

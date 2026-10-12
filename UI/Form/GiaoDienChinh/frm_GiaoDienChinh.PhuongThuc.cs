@@ -1,5 +1,4 @@
 ﻿using Guna.UI2.WinForms;
-using SoThuChiCaNhan;
 using System;
 using System.Collections.Generic;
 using System.Text;

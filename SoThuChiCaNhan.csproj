@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Form\GiaoDienChinh\DanhMucCuaBan\" />
+    <Folder Include="UI\Form\GiaoDienChinh\DanhMucCuaBan\" />
   </ItemGroup>
 	
 </Project>
