@@ -1,6 +1,6 @@
 namespace SoThuChiCaNhan;
 
-public enum srv_KetQuaDangKy // enum để trả kết quả tuỳ chỉnh
+public enum srv_KetQuaDangKy
 {
     ThanhCong,
     DuLieuKhongHopLe,
@@ -15,60 +15,81 @@ public enum srv_KetQuaDangNhap
     SaiThongTin
 }
 
+/// <summary>
+/// Kết quả xử lý đổi mật khẩu.
+/// </summary>
+public enum srv_KetQuaDoiMatKhau
+{
+    ThanhCong,
+    ThatBai,
+    DuLieuKhongHopLe,
+    SaiThongTin
+}
+
 public class srv_NguoiDung
 {
+    // Đăng ký lớp lấy dữ liệu từ csdl
     private readonly dal_NguoiDung dalNguoiDung = new();
 
-    public srv_KetQuaDangKy DangKy(string hoTen, string tenDangNhap, string matKhau)
+    public async Task<srv_KetQuaDoiMatKhau> DoiMatKhauAsync(int maNguoiDung, string matKhauCu, string matKhauMoi)
     {
-        if (string.IsNullOrWhiteSpace(hoTen) ||
-            string.IsNullOrWhiteSpace(tenDangNhap) ||
-            string.IsNullOrWhiteSpace(matKhau))
-        {
+        if (maNguoiDung <= 0 || string.IsNullOrWhiteSpace(matKhauCu) || string.IsNullOrWhiteSpace(matKhauMoi))
+            return srv_KetQuaDoiMatKhau.DuLieuKhongHopLe;
+
+        // Lấy thông tin người dùng
+        var ngd = await dalNguoiDung.TimTheoMaNguoiDung(maNguoiDung);
+        if (ngd == null) return srv_KetQuaDoiMatKhau.SaiThongTin;
+
+        // Kiểm tra khớp mật khẩu cũ -> Để xác nhận chính xác chủ tài khoản
+        if (!BCrypt.Net.BCrypt.Verify(matKhauCu, ngd.MatKhau))
+            return srv_KetQuaDoiMatKhau.SaiThongTin;
+
+        // Cập nhật mật khẩu người dùng
+        return await dalNguoiDung.DoiMatKhau(maNguoiDung, BCrypt.Net.BCrypt.HashPassword(matKhauMoi))
+            ? srv_KetQuaDoiMatKhau.ThanhCong
+            : srv_KetQuaDoiMatKhau.ThatBai;
+    }
+
+    public async Task<srv_KetQuaDangKy> DangKyAsync(string hoTen, string tenDangNhap, string matKhau)
+    {
+        if (string.IsNullOrWhiteSpace(hoTen) || string.IsNullOrWhiteSpace(tenDangNhap) || string.IsNullOrWhiteSpace(matKhau))
             return srv_KetQuaDangKy.DuLieuKhongHopLe;
-        }
 
-        hoTen = hoTen.Trim(); // Trim() Xoá bỏ khoảng trắng
-        tenDangNhap = tenDangNhap.Trim();
-
+        // Kiểm tra độ dài chuỗi
         if (tenDangNhap.Length > 50 || hoTen.Length > 100 || matKhau.Length > 255)
-        {
             return srv_KetQuaDangKy.DuLieuKhongHopLe;
-        }
 
-        if (dal_HoTro.TimKiemDon(tenDangNhap, "TenDangNhap", "NguoiDung"))
-        {
+        // Kiểm tra tồn tại người dùng trên hệ thống
+        if (await dalNguoiDung.TimTheoTenDangNhap(tenDangNhap) != null)
             return srv_KetQuaDangKy.TaiKhoanDaTonTai;
-        }
 
-        mod_NguoiDung nguoiDung = new()
+        // Tạo đối tượng người dùng mới
+        mod_NguoiDung ngd = new()
         {
             HoTen = hoTen,
             TenDangNhap = tenDangNhap,
-            MatKhau = matKhau,
+            MatKhau = BCrypt.Net.BCrypt.HashPassword(matKhau),
             SoDu = 0,
-            AnhDaiDien = "default.png",
+            AnhDaiDien = "default_avatar.png",
             NgayTao = DateTime.Now
         };
 
-        return dalNguoiDung.DangKy(nguoiDung)
+        return await dalNguoiDung.ThemNguoiDung(ngd)
             ? srv_KetQuaDangKy.ThanhCong
             : srv_KetQuaDangKy.ThatBai;
     }
 
-    public srv_KetQuaDangNhap DangNhap(string tenDangNhap, string matKhau, out mod_NguoiDung nguoiDung)
+    public async Task<(srv_KetQuaDangNhap kq, mod_NguoiDung? ngd)> DangNhapAsync(string tenDangNhap, string matKhau)
     {
-        nguoiDung = null;
-
         if (string.IsNullOrWhiteSpace(tenDangNhap) || string.IsNullOrWhiteSpace(matKhau))
-        {
-            return srv_KetQuaDangNhap.DuLieuKhongHopLe;
-        }
+            return (srv_KetQuaDangNhap.DuLieuKhongHopLe, null);
 
-        nguoiDung = dalNguoiDung.DangNhap(tenDangNhap.Trim(), matKhau);
+        // Tìm kiếm người dùng trên csdl
+        var ngd = await dalNguoiDung.TimTheoTenDangNhap(tenDangNhap);
 
-        return nguoiDung == null
-            ? srv_KetQuaDangNhap.SaiThongTin
-            : srv_KetQuaDangNhap.ThanhCong;
+        // Trả về dữ liệu người dùng
+        return (ngd == null || !BCrypt.Net.BCrypt.Verify(matKhau, ngd.MatKhau)) 
+            ? (srv_KetQuaDangNhap.SaiThongTin, null)
+            : (srv_KetQuaDangNhap.ThanhCong, ngd);
     }
 }

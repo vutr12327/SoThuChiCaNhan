@@ -10,17 +10,23 @@ namespace SoThuChiCaNhan;
 
 public partial class frm_DangNhap : Form
 {
-    private readonly srv_NguoiDung srvNguoiDung = new();
-
+    #region Hàm khởi tạo
     public frm_DangNhap()
     {
         InitializeComponent();
-        run_SuKien();
         run();
     }
-
+    #endregion
     private void run()
     {
+        //
+        //
+        //
+        run_SuKien();
+
+        //
+        // Hiển thị trang UserControl Đăng nhập (không phải frm_DangNhap)
+        //
         HienThiDangNhap(null, null);
     }
 }

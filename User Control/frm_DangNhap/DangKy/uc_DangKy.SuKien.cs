@@ -27,6 +27,7 @@ public partial class uc_DangKy
             tb_MatKhau.Tag = "hidden";
         }
     }
+
     public event EventHandler OnChuyenSangDangNhap;
     private void btn_csDangNhap_Click(object sender, EventArgs e)
     {

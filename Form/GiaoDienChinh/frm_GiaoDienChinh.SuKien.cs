@@ -12,28 +12,28 @@ namespace SoThuChiCaNhan;
 
 public partial class frm_GiaoDienChinh
 {
-    private void btn_TongQuan_Click(object sender, EventArgs e)
+
+    void run_SuKien()
     {
-        ChuanHoaTieuDe("Tổng quan");
-        ChuyenTrang(TongQuan);
+
     }
 
+    //
+    // Các sự kiện chuyển trang
+    //
+    private void btn_TongQuan_Click(object sender, EventArgs e) => ChuyenTrang(TongQuan, "Tổng quan");
+    private void btn_LichSuGiaoDich_Click(object sender, EventArgs e) => ChuyenTrang(LichSuGiaoDich, "Lịch sử giao dịch");
+    private void btn_ThongTinNguoiDung_Click(object sender, EventArgs e) => ChuyenTrang(CaNhan, "Thông tin cá nhân");
+    private void btn_TroChuyenVoiTroLy_Click(object sender, EventArgs e) => ChuyenTrang(TroLyAI, "Trợ lý của bạn");
+    private void btn_DanhMucCuaBan_Click(object sender, EventArgs e) => ChuyenTrang(DanhMucCuaBan, "Danh mục của bạn");
     private void btn_TroLyCuaBan_Click(object sender, EventArgs e)
     {
-        ChuanHoaTieuDe("Trợ lý của bạn");
         KichHoatNut(btn_TroChuyenVoiTroLy, EventArgs.Empty);
-        ChuyenTrang(TroLyAI);
+        ChuyenTrang(TroLyAI, "Trợ lý của bạn");
     }
 
-    private void btn_TroChuyenVoiTroLy_Click(object sender, EventArgs e)
-    {
-        ChuanHoaTieuDe("Trợ lý của bạn");
-        ChuyenTrang(TroLyAI);
-    }
-
-    private void btn_LichSuGiaoDich_Click(object sender, EventArgs e)
-    {
-        ChuanHoaTieuDe("Lịch sử giao dịch");
-        ChuyenTrang(LichSuGiaoDich);
-    }
+    //
+    // Sự kiện đăng xuất
+    //
+    private void btn_DangXuat_Click(object sender, EventArgs e) => mainAppContext.HienThiFormDangNhap();
 }

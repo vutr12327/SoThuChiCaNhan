@@ -14,26 +14,28 @@ public partial class frm_GiaoDienChinh : Form
     public frm_GiaoDienChinh()
     {
         InitializeComponent();
-        run(); // Luồng chạy chính
+        run();
     }
     #endregion
 
-    #region Luồng chạy chính ứng dụng
+    #region Khởi tạo mặc định khi mở ứng dụng lần đầu
     private void run()
     {
-        run_MauSac(); // Màu sắc .MauSac
-        run_KhoiTao(); // Khởi tạo chạy lần đầu
-    }
-    #endregion
+        //
+        //
+        //
+        run_MauSac();
+        run_SuKien();
 
-    #region Khởi tạo mở ứng dụng lần đầu
-    private void run_KhoiTao()
-    {
+        //
+        // Nạp dữ liệu người dùng từ Session
+        //
+        NapDuLieuTuSession();
+
         //
         // Mở trang mặc định
         //
-        ChuanHoaTieuDe("Tổng quan");
-        ChuyenTrang(TongQuan);
+        ChuyenTrang(TongQuan, "Tổng quan");
 
         //
         // Tiêu đề form

@@ -43,6 +43,9 @@ partial class uc_TongQuan
         Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
         Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
         Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+        Guna.Charts.WinForms.LPoint lPoint1 = new Guna.Charts.WinForms.LPoint();
+        Guna.Charts.WinForms.LPoint lPoint2 = new Guna.Charts.WinForms.LPoint();
+        Guna.Charts.WinForms.LPoint lPoint3 = new Guna.Charts.WinForms.LPoint();
         Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
         Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
         Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
@@ -58,20 +61,17 @@ partial class uc_TongQuan
         Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
         Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
         Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_TongQuan));
-        Guna.Charts.WinForms.LPoint lPoint1 = new Guna.Charts.WinForms.LPoint();
-        Guna.Charts.WinForms.LPoint lPoint2 = new Guna.Charts.WinForms.LPoint();
-        Guna.Charts.WinForms.LPoint lPoint3 = new Guna.Charts.WinForms.LPoint();
         Guna.Charts.WinForms.LPoint lPoint4 = new Guna.Charts.WinForms.LPoint();
         Guna.Charts.WinForms.LPoint lPoint5 = new Guna.Charts.WinForms.LPoint();
         Guna.Charts.WinForms.LPoint lPoint6 = new Guna.Charts.WinForms.LPoint();
         Guna.Charts.WinForms.LPoint lPoint7 = new Guna.Charts.WinForms.LPoint();
         Guna.Charts.WinForms.LPoint lPoint8 = new Guna.Charts.WinForms.LPoint();
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_TongQuan));
         gunaChart1 = new Guna.Charts.WinForms.GunaChart();
-        gunaChart3 = new Guna.Charts.WinForms.GunaChart();
-        guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
         gunaDoughnutDataset1 = new Guna.Charts.WinForms.GunaDoughnutDataset();
+        gunaChart3 = new Guna.Charts.WinForms.GunaChart();
         gunaLineDataset1 = new Guna.Charts.WinForms.GunaLineDataset();
+        guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
         SuspendLayout();
         // 
         // gunaChart1
@@ -111,6 +111,18 @@ partial class uc_TongQuan
         tick3.Font = chartFont8;
         gunaChart1.ZAxes.Ticks = tick3;
         // 
+        // gunaDoughnutDataset1
+        // 
+        lPoint1.Label = "Ăn uống";
+        lPoint1.Y = 50D;
+        lPoint2.Label = "Nạp game";
+        lPoint2.Y = 500D;
+        lPoint3.Label = "Tiền nhà";
+        lPoint3.Y = 100D;
+        gunaDoughnutDataset1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint1, lPoint2, lPoint3 });
+        gunaDoughnutDataset1.Label = "Doughnut1";
+        gunaDoughnutDataset1.TargetChart = gunaChart1;
+        // 
         // gunaChart3
         // 
         gunaChart3.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { gunaLineDataset1 });
@@ -146,30 +158,6 @@ partial class uc_TongQuan
         tick6.Font = chartFont16;
         gunaChart3.ZAxes.Ticks = tick6;
         // 
-        // guna2HtmlLabel3
-        // 
-        guna2HtmlLabel3.BackColor = Color.Transparent;
-        guna2HtmlLabel3.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel3.ForeColor = Color.Black;
-        guna2HtmlLabel3.Location = new Point(228, 439);
-        guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-        guna2HtmlLabel3.Size = new Size(477, 62);
-        guna2HtmlLabel3.TabIndex = 8;
-        guna2HtmlLabel3.Text = resources.GetString("guna2HtmlLabel3.Text");
-        guna2HtmlLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // gunaDoughnutDataset1
-        // 
-        lPoint1.Label = "Ăn uống";
-        lPoint1.Y = 50D;
-        lPoint2.Label = "Nạp game";
-        lPoint2.Y = 500D;
-        lPoint3.Label = "Tiền nhà";
-        lPoint3.Y = 100D;
-        gunaDoughnutDataset1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint1, lPoint2, lPoint3 });
-        gunaDoughnutDataset1.Label = "Doughnut1";
-        gunaDoughnutDataset1.TargetChart = gunaChart1;
-        // 
         // gunaLineDataset1
         // 
         gunaLineDataset1.BorderColor = Color.Empty;
@@ -188,10 +176,23 @@ partial class uc_TongQuan
         gunaLineDataset1.Label = "Line1";
         gunaLineDataset1.TargetChart = gunaChart3;
         // 
+        // guna2HtmlLabel3
+        // 
+        guna2HtmlLabel3.BackColor = Color.Transparent;
+        guna2HtmlLabel3.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
+        guna2HtmlLabel3.ForeColor = Color.Black;
+        guna2HtmlLabel3.Location = new Point(228, 439);
+        guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+        guna2HtmlLabel3.Size = new Size(477, 62);
+        guna2HtmlLabel3.TabIndex = 8;
+        guna2HtmlLabel3.Text = resources.GetString("guna2HtmlLabel3.Text");
+        guna2HtmlLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        // 
         // uc_TongQuan
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
+        AutoScroll = true;
         BackColor = Color.White;
         Controls.Add(guna2HtmlLabel3);
         Controls.Add(gunaChart3);
