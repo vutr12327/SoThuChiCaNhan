@@ -34,12 +34,7 @@ public class dal_GiaoDich
             switch(dm.Loai)
             {
                 case "Thu": ngd.SoDu += gd.SoTien; break;
-
-                case "Chi":
-                    if (ngd.SoDu >= gd.SoTien) ngd.SoDu -= gd.SoTien;
-                    else throw new Exception("Không đủ số dư");
-                    break;
-
+                case "Chi": ngd.SoDu -= gd.SoTien; break;
                 default: throw new Exception("Không hợp lệ");
             }
 

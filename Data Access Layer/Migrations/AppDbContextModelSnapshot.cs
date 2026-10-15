@@ -137,6 +137,35 @@ namespace SoThuChiCaNhan.Migrations
                     b.ToTable("NguoiDung");
                 });
 
+            modelBuilder.Entity("SoThuChiCaNhan.mod_TinNhanAI", b =>
+                {
+                    b.Property<int>("MaTinNhanAI")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaTinNhanAI"));
+
+                    b.Property<int>("MaNguoiDung")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ThoiGianNhan")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TinNhanCuaAI")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TinNhanCuaBan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("MaTinNhanAI");
+
+                    b.HasIndex("MaNguoiDung");
+
+                    b.ToTable("TinNhanAI");
+                });
+
             modelBuilder.Entity("SoThuChiCaNhan.mod_DanhMuc", b =>
                 {
                     b.HasOne("SoThuChiCaNhan.mod_NguoiDung", "NguoiDung")
@@ -165,6 +194,17 @@ namespace SoThuChiCaNhan.Migrations
                     b.Navigation("NguoiDung");
                 });
 
+            modelBuilder.Entity("SoThuChiCaNhan.mod_TinNhanAI", b =>
+                {
+                    b.HasOne("SoThuChiCaNhan.mod_NguoiDung", "NguoiDung")
+                        .WithMany("TinNhanAIs")
+                        .HasForeignKey("MaNguoiDung")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("NguoiDung");
+                });
+
             modelBuilder.Entity("SoThuChiCaNhan.mod_DanhMuc", b =>
                 {
                     b.Navigation("GiaoDichs");
@@ -175,6 +215,8 @@ namespace SoThuChiCaNhan.Migrations
                     b.Navigation("DanhMucs");
 
                     b.Navigation("GiaoDichs");
+
+                    b.Navigation("TinNhanAIs");
                 });
 #pragma warning restore 612, 618
         }

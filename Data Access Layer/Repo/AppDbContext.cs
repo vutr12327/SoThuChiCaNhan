@@ -9,6 +9,7 @@ public partial class AppDbContext : DbContext
     public DbSet<mod_NguoiDung> NguoiDung { get; set; }
     public DbSet<mod_GiaoDich> GiaoDich { get; set; }
     public DbSet<mod_DanhMuc> DanhMuc { get; set; }
+    public DbSet<mod_TinNhanAI> TinNhanAI { get; set; }
 
     /// <summary>
     /// Cấu hình cấu trúc và các quy tắc cho các thực thể.

@@ -28,305 +28,157 @@ partial class uc_TroLyAI
     /// </summary>
     private void InitializeComponent()
     {
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_TroLyAI));
-        guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-        guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+        tableLayoutPanel1 = new TableLayoutPanel();
+        tableLayoutPanel2 = new TableLayoutPanel();
+        tb_NhapTinNhan = new Guna.UI2.WinForms.Guna2TextBox();
+        btn_GuiTinNhan = new Guna.UI2.WinForms.Guna2ImageButton();
+        guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+        guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+        pnl_HienThi = new Guna.UI2.WinForms.Guna2Panel();
+        tableLayoutPanel1.SuspendLayout();
+        tableLayoutPanel2.SuspendLayout();
+        guna2Panel1.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
         SuspendLayout();
         // 
-        // guna2HtmlLabel3
+        // tableLayoutPanel1
         // 
-        guna2HtmlLabel3.BackColor = Color.Transparent;
-        guna2HtmlLabel3.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel3.ForeColor = Color.White;
-        guna2HtmlLabel3.Location = new Point(313, 241);
-        guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-        guna2HtmlLabel3.Size = new Size(485, 62);
-        guna2HtmlLabel3.TabIndex = 7;
-        guna2HtmlLabel3.Text = resources.GetString("guna2HtmlLabel3.Text");
-        guna2HtmlLabel3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        tableLayoutPanel1.ColumnCount = 1;
+        tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 2);
+        tableLayoutPanel1.Controls.Add(guna2Panel1, 0, 0);
+        tableLayoutPanel1.Controls.Add(pnl_HienThi, 0, 1);
+        tableLayoutPanel1.Dock = DockStyle.Fill;
+        tableLayoutPanel1.Location = new Point(0, 0);
+        tableLayoutPanel1.Name = "tableLayoutPanel1";
+        tableLayoutPanel1.RowCount = 3;
+        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 90F));
+        tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+        tableLayoutPanel1.RowStyles.Add(new RowStyle());
+        tableLayoutPanel1.Size = new Size(1050, 605);
+        tableLayoutPanel1.TabIndex = 0;
         // 
-        // guna2HtmlLabel1
+        // tableLayoutPanel2
         // 
-        guna2HtmlLabel1.BackColor = Color.Transparent;
-        guna2HtmlLabel1.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel1.ForeColor = Color.White;
-        guna2HtmlLabel1.Location = new Point(313, 309);
-        guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-        guna2HtmlLabel1.Size = new Size(485, 62);
-        guna2HtmlLabel1.TabIndex = 8;
-        guna2HtmlLabel1.Text = resources.GetString("guna2HtmlLabel1.Text");
-        guna2HtmlLabel1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        tableLayoutPanel2.ColumnCount = 2;
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75.09579F));
+        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 24.9042149F));
+        tableLayoutPanel2.Controls.Add(tb_NhapTinNhan, 0, 0);
+        tableLayoutPanel2.Controls.Add(btn_GuiTinNhan, 1, 0);
+        tableLayoutPanel2.Dock = DockStyle.Fill;
+        tableLayoutPanel2.Location = new Point(3, 537);
+        tableLayoutPanel2.Name = "tableLayoutPanel2";
+        tableLayoutPanel2.RowCount = 1;
+        tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+        tableLayoutPanel2.Size = new Size(1044, 65);
+        tableLayoutPanel2.TabIndex = 0;
         // 
-        // guna2HtmlLabel2
+        // tb_NhapTinNhan
         // 
-        guna2HtmlLabel2.BackColor = Color.Transparent;
-        guna2HtmlLabel2.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel2.ForeColor = Color.White;
-        guna2HtmlLabel2.Location = new Point(313, 377);
-        guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-        guna2HtmlLabel2.Size = new Size(485, 62);
-        guna2HtmlLabel2.TabIndex = 9;
-        guna2HtmlLabel2.Text = resources.GetString("guna2HtmlLabel2.Text");
-        guna2HtmlLabel2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        tb_NhapTinNhan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        tb_NhapTinNhan.Animated = true;
+        tb_NhapTinNhan.AutoRoundedCorners = true;
+        tb_NhapTinNhan.BorderRadius = 24;
+        tb_NhapTinNhan.CustomizableEdges = customizableEdges1;
+        tb_NhapTinNhan.DefaultText = "";
+        tb_NhapTinNhan.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+        tb_NhapTinNhan.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+        tb_NhapTinNhan.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+        tb_NhapTinNhan.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+        tb_NhapTinNhan.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+        tb_NhapTinNhan.Font = new Font("Segoe UI", 9F);
+        tb_NhapTinNhan.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+        tb_NhapTinNhan.Location = new Point(139, 4);
+        tb_NhapTinNhan.Margin = new Padding(3, 4, 3, 4);
+        tb_NhapTinNhan.Name = "tb_NhapTinNhan";
+        tb_NhapTinNhan.PlaceholderText = "Gửi tin nhắn cho trợ lý của bạn....";
+        tb_NhapTinNhan.SelectedText = "";
+        tb_NhapTinNhan.ShadowDecoration.CustomizableEdges = customizableEdges2;
+        tb_NhapTinNhan.Size = new Size(642, 50);
+        tb_NhapTinNhan.TabIndex = 1;
         // 
-        // guna2HtmlLabel4
+        // btn_GuiTinNhan
         // 
-        guna2HtmlLabel4.BackColor = Color.Transparent;
-        guna2HtmlLabel4.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel4.ForeColor = Color.White;
-        guna2HtmlLabel4.Location = new Point(313, 185);
-        guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-        guna2HtmlLabel4.Size = new Size(485, 62);
-        guna2HtmlLabel4.TabIndex = 12;
-        guna2HtmlLabel4.Text = resources.GetString("guna2HtmlLabel4.Text");
-        guna2HtmlLabel4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        btn_GuiTinNhan.Anchor = AnchorStyles.Left;
+        btn_GuiTinNhan.CheckedState.ImageSize = new Size(64, 64);
+        btn_GuiTinNhan.Cursor = Cursors.Hand;
+        btn_GuiTinNhan.HoverState.ImageSize = new Size(64, 64);
+        btn_GuiTinNhan.Image = Properties.Resources.send;
+        btn_GuiTinNhan.ImageOffset = new Point(0, 0);
+        btn_GuiTinNhan.ImageRotate = 0F;
+        btn_GuiTinNhan.ImageSize = new Size(30, 30);
+        btn_GuiTinNhan.Location = new Point(787, 17);
+        btn_GuiTinNhan.Name = "btn_GuiTinNhan";
+        btn_GuiTinNhan.PressedState.ImageSize = new Size(64, 64);
+        btn_GuiTinNhan.ShadowDecoration.CustomizableEdges = customizableEdges3;
+        btn_GuiTinNhan.Size = new Size(30, 30);
+        btn_GuiTinNhan.TabIndex = 2;
+        btn_GuiTinNhan.Click += btn_GuiTinNhan_Click;
         // 
-        // guna2HtmlLabel5
+        // guna2Panel1
         // 
-        guna2HtmlLabel5.BackColor = Color.Transparent;
-        guna2HtmlLabel5.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel5.ForeColor = Color.White;
-        guna2HtmlLabel5.Location = new Point(313, 117);
-        guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-        guna2HtmlLabel5.Size = new Size(485, 62);
-        guna2HtmlLabel5.TabIndex = 11;
-        guna2HtmlLabel5.Text = resources.GetString("guna2HtmlLabel5.Text");
-        guna2HtmlLabel5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        guna2Panel1.Controls.Add(guna2CirclePictureBox1);
+        guna2Panel1.CustomizableEdges = customizableEdges5;
+        guna2Panel1.Dock = DockStyle.Fill;
+        guna2Panel1.Location = new Point(3, 3);
+        guna2Panel1.Name = "guna2Panel1";
+        guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+        guna2Panel1.Size = new Size(1044, 84);
+        guna2Panel1.TabIndex = 2;
         // 
-        // guna2HtmlLabel6
+        // guna2CirclePictureBox1
         // 
-        guna2HtmlLabel6.BackColor = Color.Transparent;
-        guna2HtmlLabel6.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel6.ForeColor = Color.White;
-        guna2HtmlLabel6.Location = new Point(313, 49);
-        guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-        guna2HtmlLabel6.Size = new Size(485, 62);
-        guna2HtmlLabel6.TabIndex = 10;
-        guna2HtmlLabel6.Text = resources.GetString("guna2HtmlLabel6.Text");
-        guna2HtmlLabel6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        guna2CirclePictureBox1.Image = Properties.Resources.happy;
+        guna2CirclePictureBox1.ImageRotate = 0F;
+        guna2CirclePictureBox1.Location = new Point(27, 12);
+        guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+        guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+        guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+        guna2CirclePictureBox1.Size = new Size(60, 60);
+        guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        guna2CirclePictureBox1.TabIndex = 0;
+        guna2CirclePictureBox1.TabStop = false;
         // 
-        // guna2HtmlLabel7
+        // pnl_HienThi
         // 
-        guna2HtmlLabel7.BackColor = Color.Transparent;
-        guna2HtmlLabel7.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel7.ForeColor = Color.White;
-        guna2HtmlLabel7.Location = new Point(313, 581);
-        guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-        guna2HtmlLabel7.Size = new Size(485, 62);
-        guna2HtmlLabel7.TabIndex = 18;
-        guna2HtmlLabel7.Text = resources.GetString("guna2HtmlLabel7.Text");
-        guna2HtmlLabel7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel8
-        // 
-        guna2HtmlLabel8.BackColor = Color.Transparent;
-        guna2HtmlLabel8.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel8.ForeColor = Color.White;
-        guna2HtmlLabel8.Location = new Point(313, 513);
-        guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-        guna2HtmlLabel8.Size = new Size(485, 62);
-        guna2HtmlLabel8.TabIndex = 17;
-        guna2HtmlLabel8.Text = resources.GetString("guna2HtmlLabel8.Text");
-        guna2HtmlLabel8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel9
-        // 
-        guna2HtmlLabel9.BackColor = Color.Transparent;
-        guna2HtmlLabel9.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel9.ForeColor = Color.White;
-        guna2HtmlLabel9.Location = new Point(313, 445);
-        guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-        guna2HtmlLabel9.Size = new Size(485, 62);
-        guna2HtmlLabel9.TabIndex = 16;
-        guna2HtmlLabel9.Text = resources.GetString("guna2HtmlLabel9.Text");
-        guna2HtmlLabel9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel10
-        // 
-        guna2HtmlLabel10.BackColor = Color.Transparent;
-        guna2HtmlLabel10.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel10.ForeColor = Color.White;
-        guna2HtmlLabel10.Location = new Point(313, 773);
-        guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-        guna2HtmlLabel10.Size = new Size(485, 62);
-        guna2HtmlLabel10.TabIndex = 15;
-        guna2HtmlLabel10.Text = resources.GetString("guna2HtmlLabel10.Text");
-        guna2HtmlLabel10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel11
-        // 
-        guna2HtmlLabel11.BackColor = Color.Transparent;
-        guna2HtmlLabel11.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel11.ForeColor = Color.White;
-        guna2HtmlLabel11.Location = new Point(313, 705);
-        guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-        guna2HtmlLabel11.Size = new Size(485, 62);
-        guna2HtmlLabel11.TabIndex = 14;
-        guna2HtmlLabel11.Text = resources.GetString("guna2HtmlLabel11.Text");
-        guna2HtmlLabel11.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel12
-        // 
-        guna2HtmlLabel12.BackColor = Color.Transparent;
-        guna2HtmlLabel12.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel12.ForeColor = Color.White;
-        guna2HtmlLabel12.Location = new Point(313, 637);
-        guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-        guna2HtmlLabel12.Size = new Size(485, 62);
-        guna2HtmlLabel12.TabIndex = 13;
-        guna2HtmlLabel12.Text = resources.GetString("guna2HtmlLabel12.Text");
-        guna2HtmlLabel12.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel13
-        // 
-        guna2HtmlLabel13.BackColor = Color.Transparent;
-        guna2HtmlLabel13.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel13.ForeColor = Color.White;
-        guna2HtmlLabel13.Location = new Point(313, 1237);
-        guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-        guna2HtmlLabel13.Size = new Size(485, 62);
-        guna2HtmlLabel13.TabIndex = 25;
-        guna2HtmlLabel13.Text = resources.GetString("guna2HtmlLabel13.Text");
-        guna2HtmlLabel13.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel14
-        // 
-        guna2HtmlLabel14.BackColor = Color.Transparent;
-        guna2HtmlLabel14.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel14.ForeColor = Color.White;
-        guna2HtmlLabel14.Location = new Point(313, 977);
-        guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-        guna2HtmlLabel14.Size = new Size(485, 62);
-        guna2HtmlLabel14.TabIndex = 24;
-        guna2HtmlLabel14.Text = resources.GetString("guna2HtmlLabel14.Text");
-        guna2HtmlLabel14.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel15
-        // 
-        guna2HtmlLabel15.BackColor = Color.Transparent;
-        guna2HtmlLabel15.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel15.ForeColor = Color.White;
-        guna2HtmlLabel15.Location = new Point(313, 909);
-        guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-        guna2HtmlLabel15.Size = new Size(485, 62);
-        guna2HtmlLabel15.TabIndex = 23;
-        guna2HtmlLabel15.Text = resources.GetString("guna2HtmlLabel15.Text");
-        guna2HtmlLabel15.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel16
-        // 
-        guna2HtmlLabel16.BackColor = Color.Transparent;
-        guna2HtmlLabel16.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel16.ForeColor = Color.White;
-        guna2HtmlLabel16.Location = new Point(313, 841);
-        guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-        guna2HtmlLabel16.Size = new Size(485, 62);
-        guna2HtmlLabel16.TabIndex = 22;
-        guna2HtmlLabel16.Text = resources.GetString("guna2HtmlLabel16.Text");
-        guna2HtmlLabel16.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel17
-        // 
-        guna2HtmlLabel17.BackColor = Color.Transparent;
-        guna2HtmlLabel17.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel17.ForeColor = Color.White;
-        guna2HtmlLabel17.Location = new Point(313, 1169);
-        guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-        guna2HtmlLabel17.Size = new Size(485, 62);
-        guna2HtmlLabel17.TabIndex = 21;
-        guna2HtmlLabel17.Text = resources.GetString("guna2HtmlLabel17.Text");
-        guna2HtmlLabel17.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel18
-        // 
-        guna2HtmlLabel18.BackColor = Color.Transparent;
-        guna2HtmlLabel18.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel18.ForeColor = Color.White;
-        guna2HtmlLabel18.Location = new Point(313, 1101);
-        guna2HtmlLabel18.Name = "guna2HtmlLabel18";
-        guna2HtmlLabel18.Size = new Size(485, 62);
-        guna2HtmlLabel18.TabIndex = 20;
-        guna2HtmlLabel18.Text = resources.GetString("guna2HtmlLabel18.Text");
-        guna2HtmlLabel18.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-        // 
-        // guna2HtmlLabel19
-        // 
-        guna2HtmlLabel19.BackColor = Color.Transparent;
-        guna2HtmlLabel19.Font = new Font("Bahnschrift Light SemiCondensed", 30F);
-        guna2HtmlLabel19.ForeColor = Color.White;
-        guna2HtmlLabel19.Location = new Point(313, 1033);
-        guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-        guna2HtmlLabel19.Size = new Size(485, 62);
-        guna2HtmlLabel19.TabIndex = 19;
-        guna2HtmlLabel19.Text = resources.GetString("guna2HtmlLabel19.Text");
-        guna2HtmlLabel19.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        pnl_HienThi.AutoScroll = true;
+        pnl_HienThi.CustomizableEdges = customizableEdges7;
+        pnl_HienThi.Dock = DockStyle.Fill;
+        pnl_HienThi.Location = new Point(3, 93);
+        pnl_HienThi.Name = "pnl_HienThi";
+        pnl_HienThi.ShadowDecoration.CustomizableEdges = customizableEdges8;
+        pnl_HienThi.Size = new Size(1044, 438);
+        pnl_HienThi.TabIndex = 3;
         // 
         // uc_TroLyAI
         // 
-        AutoScaleDimensions = new SizeF(8F, 20F);
-        AutoScaleMode = AutoScaleMode.Font;
-        BackColor = Color.Red;
-        Controls.Add(guna2HtmlLabel13);
-        Controls.Add(guna2HtmlLabel14);
-        Controls.Add(guna2HtmlLabel15);
-        Controls.Add(guna2HtmlLabel16);
-        Controls.Add(guna2HtmlLabel17);
-        Controls.Add(guna2HtmlLabel18);
-        Controls.Add(guna2HtmlLabel19);
-        Controls.Add(guna2HtmlLabel7);
-        Controls.Add(guna2HtmlLabel8);
-        Controls.Add(guna2HtmlLabel9);
-        Controls.Add(guna2HtmlLabel10);
-        Controls.Add(guna2HtmlLabel11);
-        Controls.Add(guna2HtmlLabel12);
-        Controls.Add(guna2HtmlLabel4);
-        Controls.Add(guna2HtmlLabel5);
-        Controls.Add(guna2HtmlLabel6);
-        Controls.Add(guna2HtmlLabel2);
-        Controls.Add(guna2HtmlLabel1);
-        Controls.Add(guna2HtmlLabel3);
+        AutoScaleMode = AutoScaleMode.None;
+        BackColor = Color.White;
+        Controls.Add(tableLayoutPanel1);
         Name = "uc_TroLyAI";
-        Size = new Size(1111, 1021);
+        Size = new Size(1050, 605);
+        tableLayoutPanel1.ResumeLayout(false);
+        tableLayoutPanel2.ResumeLayout(false);
+        guna2Panel1.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
         ResumeLayout(false);
-        PerformLayout();
     }
 
     #endregion
 
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
-    private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+    private TableLayoutPanel tableLayoutPanel1;
+    private TableLayoutPanel tableLayoutPanel2;
+    private Guna.UI2.WinForms.Guna2TextBox tb_NhapTinNhan;
+    private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+    private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+    private Guna.UI2.WinForms.Guna2ImageButton btn_GuiTinNhan;
+    private Guna.UI2.WinForms.Guna2Panel pnl_HienThi;
 }

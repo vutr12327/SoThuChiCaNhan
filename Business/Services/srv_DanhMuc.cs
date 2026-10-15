@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-namespace SoThuChiCaNhan.Business.Services;
+﻿namespace SoThuChiCaNhan.Business.Services;
 
 public enum srv_KetQuaDanhMuc
 {
@@ -16,21 +15,30 @@ public class srv_DanhMuc
     /// Lấy danh sách danh mục của người dùng, bao gồm danh mục hệ thống.
     /// </summary>
     /// <returns>Trả về danh sách danh mục; nếu mã người dùng không hợp lệ thì trả về danh sách rỗng.</returns>
-    public async Task<List<mod_DanhMuc>> LayDanhSachDanhMucAsync(int maNguoiDung)
+    public async Task<List<dto_DanhMuc>> LayDanhSachDanhMucAsync(int maNguoiDung)
     {
         return maNguoiDung <= 0
-            ? new List<mod_DanhMuc>()
-            : await dalDanhMuc.LayTatCaDanhMucAsync(maNguoiDung);
+            ? new List<dto_DanhMuc>()
+            : (await dalDanhMuc.LayTatCaDanhMucAsync(maNguoiDung))
+                .Select(ChuyenSangDto)
+                .ToList();
     }
 
     /// <summary>
     /// Kiểm tra và thêm danh mục cá nhân mới.
     /// </summary>
     /// <returns>Trả về kết quả thêm danh mục.</returns>
-    public async Task<srv_KetQuaDanhMuc> ThemDanhMucAsync(mod_DanhMuc dm)
+    public async Task<srv_KetQuaDanhMuc> ThemDanhMucAsync(dto_ThemDanhMuc dto)
     {
-        if (dm == null || dm.MaNguoiDung <= 0 || !KiemTraDuLieu(dm.TenDanhMuc, dm.Loai))
+        if (dto == null || dto.MaNguoiDung <= 0 || !KiemTraDuLieu(dto.TenDanhMuc, dto.Loai))
             return srv_KetQuaDanhMuc.DuLieuKhongHopLe;
+
+        var dm = new mod_DanhMuc
+        {
+            TenDanhMuc = dto.TenDanhMuc.Trim(),
+            Loai = dto.Loai,
+            MaNguoiDung = dto.MaNguoiDung
+        };
 
         bool ketQua = await dalDanhMuc.ThemDanhMucAsync(dm);
         return ketQua ? srv_KetQuaDanhMuc.ThanhCong : srv_KetQuaDanhMuc.ThatBai;
@@ -40,10 +48,18 @@ public class srv_DanhMuc
     /// Kiểm tra và cập nhật danh mục cá nhân.
     /// </summary>
     /// <returns>Trả về kết quả cập nhật danh mục.</returns>
-    public async Task<srv_KetQuaDanhMuc> SuaDanhMucAsync(mod_DanhMuc dm)
+    public async Task<srv_KetQuaDanhMuc> SuaDanhMucAsync(dto_SuaDanhMuc dto)
     {
-        if (dm == null || dm.MaDanhMuc <= 0 || dm.MaNguoiDung <= 0 || !KiemTraDuLieu(dm.TenDanhMuc, dm.Loai))
+        if (dto == null || dto.MaDanhMuc <= 0 || dto.MaNguoiDung <= 0 || !KiemTraDuLieu(dto.TenDanhMuc, dto.Loai))
             return srv_KetQuaDanhMuc.DuLieuKhongHopLe;
+
+        var dm = new mod_DanhMuc
+        {
+            MaDanhMuc = dto.MaDanhMuc,
+            TenDanhMuc = dto.TenDanhMuc.Trim(),
+            Loai = dto.Loai,
+            MaNguoiDung = dto.MaNguoiDung
+        };
 
         bool ketQua = await dalDanhMuc.SuaDanhMucAsync(dm);
         return ketQua ? srv_KetQuaDanhMuc.ThanhCong : srv_KetQuaDanhMuc.ThatBai;
@@ -53,12 +69,12 @@ public class srv_DanhMuc
     /// Xóa danh mục cá nhân của người dùng.
     /// </summary>
     /// <returns>Trả về kết quả xóa danh mục.</returns>
-    public async Task<srv_KetQuaDanhMuc> XoaDanhMucAsync(int maDanhMuc, int maNguoiDung)
+    public async Task<srv_KetQuaDanhMuc> XoaDanhMucAsync(dto_XoaDanhMuc dto)
     {
-        if (maDanhMuc <= 0 || maNguoiDung <= 0)
+        if (dto == null || dto.MaDanhMuc <= 0 || dto.MaNguoiDung <= 0)
             return srv_KetQuaDanhMuc.DuLieuKhongHopLe;
 
-        bool ketQua = await dalDanhMuc.XoaDanhMucAsync(maDanhMuc, maNguoiDung);
+        bool ketQua = await dalDanhMuc.XoaDanhMucAsync(dto.MaDanhMuc, dto.MaNguoiDung);
         return ketQua ? srv_KetQuaDanhMuc.ThanhCong : srv_KetQuaDanhMuc.ThatBai;
     }
 
@@ -69,5 +85,18 @@ public class srv_DanhMuc
     private bool KiemTraDuLieu(string tenDanhMuc, string loai)
     {
         return !string.IsNullOrWhiteSpace(tenDanhMuc) && tenDanhMuc.Length <= 100 && (loai == "Thu" || loai == "Chi");
+    }
+
+    /// <summary>
+    /// Chuyển entity danh mục sang DTO để trả về cho tầng bên ngoài.
+    /// </summary>
+    private static dto_DanhMuc ChuyenSangDto(mod_DanhMuc dm)
+    {
+        return new dto_DanhMuc(
+            dm.MaDanhMuc,
+            dm.TenDanhMuc,
+            dm.Loai,
+            dm.MaNguoiDung
+        );
     }
 }

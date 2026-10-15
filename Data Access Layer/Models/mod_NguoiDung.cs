@@ -42,4 +42,7 @@ public class mod_NguoiDung
 
     // 1 Người dùng có nhiều "Giao dịch"
     public ICollection<mod_GiaoDich> GiaoDichs { get; set; } = new List<mod_GiaoDich>();
+
+    // 1 Người dùng có nhiều "Tin nhắn với AI"
+    public ICollection<mod_TinNhanAI> TinNhanAIs { get; set; } = new List<mod_TinNhanAI>();
 }

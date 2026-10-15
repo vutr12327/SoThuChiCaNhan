@@ -16,14 +16,15 @@ public enum srv_KetQuaDangNhap
 }
 
 /// <summary>
-/// Kết quả xử lý đổi mật khẩu.
+/// Kết quả xử lý đổi một thông tin người dùng
 /// </summary>
-public enum srv_KetQuaDoiMatKhau
+public enum srv_ThayDoiThongTin
 {
     ThanhCong,
     ThatBai,
     DuLieuKhongHopLe,
-    SaiThongTin
+    SaiThongTin,
+    KhongTonTaiNguoiDung
 }
 
 public class srv_NguoiDung
@@ -31,44 +32,29 @@ public class srv_NguoiDung
     // Đăng ký lớp lấy dữ liệu từ csdl
     private readonly dal_NguoiDung dalNguoiDung = new();
 
-    public async Task<srv_KetQuaDoiMatKhau> DoiMatKhauAsync(int maNguoiDung, string matKhauCu, string matKhauMoi)
-    {
-        if (maNguoiDung <= 0 || string.IsNullOrWhiteSpace(matKhauCu) || string.IsNullOrWhiteSpace(matKhauMoi))
-            return srv_KetQuaDoiMatKhau.DuLieuKhongHopLe;
-
-        // Lấy thông tin người dùng
-        var ngd = await dalNguoiDung.TimTheoMaNguoiDung(maNguoiDung);
-        if (ngd == null) return srv_KetQuaDoiMatKhau.SaiThongTin;
-
-        // Kiểm tra khớp mật khẩu cũ -> Để xác nhận chính xác chủ tài khoản
-        if (!BCrypt.Net.BCrypt.Verify(matKhauCu, ngd.MatKhau))
-            return srv_KetQuaDoiMatKhau.SaiThongTin;
-
-        // Cập nhật mật khẩu người dùng
-        return await dalNguoiDung.DoiMatKhau(maNguoiDung, BCrypt.Net.BCrypt.HashPassword(matKhauMoi))
-            ? srv_KetQuaDoiMatKhau.ThanhCong
-            : srv_KetQuaDoiMatKhau.ThatBai;
-    }
-
+    /// <summary>
+    /// Phương thức đăng ký người dùng
+    /// </summary>
+    /// <returns></returns>
     public async Task<srv_KetQuaDangKy> DangKyAsync(dto_DangKy d)
     {
-        if (string.IsNullOrWhiteSpace(d.hoTen) || string.IsNullOrWhiteSpace(d.tenDangNhap) || string.IsNullOrWhiteSpace(d.matKhau))
+        if (string.IsNullOrWhiteSpace(d.HoTen) || string.IsNullOrWhiteSpace(d.TenDangNhap) || string.IsNullOrWhiteSpace(d.MatKhau))
             return srv_KetQuaDangKy.DuLieuKhongHopLe;
 
         // Kiểm tra độ dài chuỗi
-        if (d.tenDangNhap.Length > 50 || d.hoTen.Length > 100 || d.matKhau.Length > 255)
+        if (d.TenDangNhap.Length > 50 || d.HoTen.Length > 100 || d.MatKhau.Length > 255)
             return srv_KetQuaDangKy.DuLieuKhongHopLe;
 
         // Kiểm tra tồn tại người dùng trên hệ thống
-        if (await dalNguoiDung.TimTheoTenDangNhap(d.tenDangNhap) != null)
+        if (await dalNguoiDung.TimTheoTenDangNhap(d.TenDangNhap) != null)
             return srv_KetQuaDangKy.TaiKhoanDaTonTai;
 
         // Tạo đối tượng người dùng mới để phục vụ cho DAL
         mod_NguoiDung ngd = new()
         {
-            HoTen = d.hoTen,
-            TenDangNhap = d.tenDangNhap,
-            MatKhau = BCrypt.Net.BCrypt.HashPassword(d.matKhau),
+            HoTen = d.HoTen,
+            TenDangNhap = d.TenDangNhap,
+            MatKhau = BCrypt.Net.BCrypt.HashPassword(d.MatKhau),
             SoDu = 0,
             AnhDaiDien = "default_avatar.png",
             NgayTao = DateTime.Now
@@ -79,16 +65,21 @@ public class srv_NguoiDung
             : srv_KetQuaDangKy.ThatBai;
     }
 
+    /// <summary>
+    /// Phương thức đăng nhập
+    /// </summary>
+    /// <param name="d"></param>
+    /// <returns></returns>
     public async Task<(srv_KetQuaDangNhap kq, dto_NguoiDung? ngd)> DangNhapAsync(dto_DangNhap d)
     {
-        if (string.IsNullOrWhiteSpace(d.tenDangNhap) || string.IsNullOrWhiteSpace(d.matKhau))
+        if (string.IsNullOrWhiteSpace(d.TenDangNhap) || string.IsNullOrWhiteSpace(d.MatKhau))
             return (srv_KetQuaDangNhap.DuLieuKhongHopLe, null);
 
         // Tìm kiếm người dùng trên csdl
-        var ngd = await dalNguoiDung.TimTheoTenDangNhap(d.tenDangNhap);
+        var ngd = await dalNguoiDung.TimTheoTenDangNhap(d.TenDangNhap);
 
         // Kiểm tra tài khoản tồn tại và khớp mật khẩu
-        if (ngd == null || !BCrypt.Net.BCrypt.Verify(d.matKhau, ngd.MatKhau)) 
+        if (ngd == null || !BCrypt.Net.BCrypt.Verify(d.MatKhau, ngd.MatKhau)) 
             return (srv_KetQuaDangNhap.SaiThongTin, null);
 
         // Khởi tạo DTO Người dùng cho UI sử dụng
@@ -102,5 +93,65 @@ public class srv_NguoiDung
 
         // Trả về dữ liệu người dùng
         return (srv_KetQuaDangNhap.ThanhCong, dto_ngd);
+    }
+    /// <summary>
+    /// Phương thức đổi mật khẩu
+    /// </summary>
+    /// <param name="d"></param>
+    /// <returns></returns>
+    public async Task<srv_ThayDoiThongTin> DoiMatKhauAsync(dto_DoiMatKhau d)
+    {
+        if (d.MaNguoiDung <= 0 || string.IsNullOrWhiteSpace(d.MatKhauCu) || string.IsNullOrWhiteSpace(d.MatKhauMoi))
+            return srv_ThayDoiThongTin.DuLieuKhongHopLe;
+
+        // Lấy thông tin người dùng
+        var ngd = await dalNguoiDung.TimTheoMaNguoiDung(d.MaNguoiDung);
+        if (ngd == null) return srv_ThayDoiThongTin.SaiThongTin;
+
+        // Kiểm tra khớp mật khẩu cũ -> Để xác nhận chính xác chủ tài khoản
+        if (!BCrypt.Net.BCrypt.Verify(d.MatKhauCu, ngd.MatKhau))
+            return srv_ThayDoiThongTin.SaiThongTin;
+
+        // Cập nhật mật khẩu người dùng
+        return await dalNguoiDung.DoiMatKhau(d.MaNguoiDung, BCrypt.Net.BCrypt.HashPassword(d.MatKhauMoi))
+            ? srv_ThayDoiThongTin.ThanhCong
+            : srv_ThayDoiThongTin.ThatBai;
+    }
+    /// <summary>
+    /// Phương thức đổi họ tên
+    /// </summary>
+    /// <param name="d"></param>
+    /// <returns></returns>
+    public async Task<srv_ThayDoiThongTin> DoiHoTenAsync(dto_DoiHoTen d)
+    {
+        if (string.IsNullOrWhiteSpace(d.HoTen))
+            return srv_ThayDoiThongTin.DuLieuKhongHopLe;
+
+        if (d.HoTen.Length > 100) 
+            return srv_ThayDoiThongTin.DuLieuKhongHopLe;
+
+        if (await dalNguoiDung.TimTheoMaNguoiDung(d.MaNguoiDung) == null)
+            return srv_ThayDoiThongTin.KhongTonTaiNguoiDung;
+
+        return await dalNguoiDung.DoiHoTen(d.MaNguoiDung, d.HoTen)
+            ? srv_ThayDoiThongTin.ThanhCong
+            : srv_ThayDoiThongTin.ThatBai;
+    }
+    /// <summary>
+    /// Phương thức đổi ảnh đại diện
+    /// </summary>
+    /// <param name="d"></param>
+    /// <returns></returns>
+    public async Task<srv_ThayDoiThongTin> DoiAnhDaiDienAsync(dto_DoiAnhDaiDien d)
+    {
+        if (string.IsNullOrWhiteSpace(d.AnhDaiDien))
+            return srv_ThayDoiThongTin.DuLieuKhongHopLe;
+
+        if (await dalNguoiDung.TimTheoMaNguoiDung(d.MaNguoiDung) == null)
+            return srv_ThayDoiThongTin.KhongTonTaiNguoiDung;
+
+        return await dalNguoiDung.DoiHoTen(d.MaNguoiDung, d.AnhDaiDien)
+            ? srv_ThayDoiThongTin.ThanhCong
+            : srv_ThayDoiThongTin.ThatBai;
     }
 }

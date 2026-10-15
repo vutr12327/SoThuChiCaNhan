@@ -32,7 +32,7 @@ public partial class frm_GiaoDienChinh : Form
         //
         // Mở trang mặc định
         //
-        ChuyenTrang(TongQuan, "Tổng quan");
+        ChuyenTrang(TroLyAI, "Trợ lý của bạn");
 
         //
         // Tiêu đề form
